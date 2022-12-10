@@ -1,0 +1,100 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(30deg, 38%, 92%);
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  width: 40%;
+  height: 540px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container-left {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.container-left img {
+  width: 100%;
+}
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: 40px;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.container-right .product-category {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+.container-right h1 {
+  font-family: Fraunces, serif;
+  font-size: 36px;
+  line-height: 36px;
+}
+.container-right .product-description {
+  line-height: 24px;
+}
+.container-right .product-price {
+  display: flex;
+  align-items: center;
+}
+.container-right .product-price span {
+  margin-right: 25px;
+  font-family: Fraunces, serif;
+  font-size: 36px;
+  color: hsl(158deg, 36%, 37%);
+}
+.container-right button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(158deg, 36%, 37%);
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: hsl(0deg, 0%, 100%);
+  transition: all 0.2s ease;
+}
+.container-right button:hover {
+  cursor: pointer;
+  background-color: hsl(157deg, 36%, 20%);
+}
+.container-right button:active {
+  transform: scale(0.97);
+}
+.container-right button span::before {
+  content: url(./images/icon-cart.svg);
+  position: absolute;
+  top: 54%;
+  left: 80px;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+}/*# sourceMappingURL=style.css.map */

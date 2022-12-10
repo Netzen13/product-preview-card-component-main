@@ -1,0 +1,133 @@
+// Primary colors
+
+$dark-cyan: hsl(158, 36%, 37%);
+$cream: hsl(30, 38%, 92%);
+
+/// Neutral colors
+
+$very-dark-blue: hsl(212, 21%, 14%);
+$dark-grayish-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+// Fonts
+
+$main-font: Montserrat, sans-serif;
+$secondary-font: Fraunces, serif;
+
+// Reset
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//---------------BODY---------------//
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $cream;
+  font-family: $main-font;
+  font-size: 14px;
+}
+
+//---------------MAIN CONTAINER---------------//
+
+.container {
+  width: 40%;
+  height: 540px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+//---------------CONTAINER LEFT---------------//
+
+.container-left {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+
+  img {
+    width: 100%;
+  }
+}
+
+//---------------CONTAINER RIGHT---------------//
+
+.container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: 40px;
+  background-color: $white;
+
+  .product-category {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+  }
+  h1 {
+    font-family: $secondary-font;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .product-description {
+    line-height: 24px;
+  }
+  .product-price {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 25px;
+      font-family: $secondary-font;
+      font-size: 36px;
+      color: $dark-cyan;
+    }
+  }
+  button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: $dark-cyan;
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 16px;
+    color: $white;
+    transition: all 0.2s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: hsl(157, 36%, 20%);
+    }
+    &:active {
+        transform: scale(0.97);
+    }
+
+    span::before {
+      content: url(./images/icon-cart.svg);
+      position: absolute;
+      top: 54%;
+      left: 80px;
+      transform: translateY(-50%) scale(1.1);
+    }
+  }
+}
+
+//---------------FOOTER---------------//
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+}

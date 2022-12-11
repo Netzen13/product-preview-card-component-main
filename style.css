@@ -12,13 +12,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 20px;
   background-color: hsl(30deg, 38%, 92%);
   font-family: Montserrat, sans-serif;
   font-size: 14px;
 }
 
 .container {
-  width: 40%;
+  width: 750px;
   height: 540px;
   display: flex;
   border-radius: 10px;
@@ -26,12 +27,8 @@ body {
 }
 
 .container-left {
-  display: flex;
-  justify-content: center;
   width: 50%;
-}
-.container-left img {
-  width: 100%;
+  background: url(./images/image-product-desktop.jpg) center/cover;
 }
 
 .container-right {
@@ -48,8 +45,9 @@ body {
   letter-spacing: 7px;
 }
 .container-right h1 {
+  max-width: 260px;
   font-family: Fraunces, serif;
-  font-size: 36px;
+  font-size: clamp(30px, 5vw, 36px);
   line-height: 36px;
 }
 .container-right .product-description {
@@ -90,11 +88,34 @@ body {
   content: url(./images/icon-cart.svg);
   position: absolute;
   top: 54%;
-  left: 80px;
+  left: clamp(48px, 15vw, 80px);
   transform: translateY(-50%) scale(1.1);
 }
 
 .attribution {
   position: absolute;
   bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    display: block;
+    max-width: 400px;
+    height: auto;
+  }
+  .container-left,
+.container-right {
+    width: auto;
+  }
+  .container-left {
+    background: url(./images/image-product-mobile.jpg) center/cover;
+    height: 240px;
+  }
+  .container-right {
+    height: 380px;
+    padding: 25px;
+  }
+  .container-right button {
+    padding: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */

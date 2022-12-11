@@ -32,6 +32,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 20px;
   background-color: $cream;
   font-family: $main-font;
   font-size: 14px;
@@ -40,7 +41,7 @@ body {
 //---------------MAIN CONTAINER---------------//
 
 .container {
-  width: 40%;
+  width: 750px;
   height: 540px;
   display: flex;
   border-radius: 10px;
@@ -50,13 +51,8 @@ body {
 //---------------CONTAINER LEFT---------------//
 
 .container-left {
-  display: flex;
-  justify-content: center;
   width: 50%;
-
-  img {
-    width: 100%;
-  }
+  background: url(./images/image-product-desktop.jpg) center / cover;
 }
 
 //---------------CONTAINER RIGHT---------------//
@@ -75,8 +71,9 @@ body {
     letter-spacing: 7px;
   }
   h1 {
+    max-width: 260px;
     font-family: $secondary-font;
-    font-size: 36px;
+    font-size: clamp(30px, 5vw ,36px);
     line-height: 36px;
   }
   .product-description {
@@ -119,7 +116,7 @@ body {
       content: url(./images/icon-cart.svg);
       position: absolute;
       top: 54%;
-      left: 80px;
+      left: clamp(48px, 15vw, 80px);
       transform: translateY(-50%) scale(1.1);
     }
   }
@@ -130,4 +127,36 @@ body {
 .attribution {
   position: absolute;
   bottom: 0;
+}
+
+
+
+//---------------SCREEN UNDER 800px---------------//
+
+
+
+@media screen and (max-width: 800px) {
+
+  .container {
+    display: block;
+    max-width: 400px;
+    height: auto;
+  }
+  .container-left, 
+  .container-right {
+    width: auto;
+  }
+  .container-left {
+    background: url(./images/image-product-mobile.jpg) center / cover;
+    height: 240px;
+  }
+  .container-right {
+    height: 380px;
+    padding: 25px;
+
+    button {
+      padding: 15px;
+    }
+  }
+  
 }

@@ -28,7 +28,10 @@ body {
 
 .container-left {
   width: 50%;
-  background: url(./images/image-product-desktop.jpg) center/cover;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.container-left img {
+  width: 100%;
 }
 
 .container-right {
@@ -57,11 +60,14 @@ body {
   display: flex;
   align-items: center;
 }
-.container-right .product-price span {
+.container-right .product-price .current-price {
   margin-right: 25px;
   font-family: Fraunces, serif;
   font-size: 36px;
   color: hsl(158deg, 36%, 37%);
+}
+.container-right .product-price .sr-only {
+  display: none;
 }
 .container-right button {
   position: relative;
@@ -107,15 +113,16 @@ body {
 .container-right {
     width: auto;
   }
-  .container-left {
-    background: url(./images/image-product-mobile.jpg) center/cover;
-    height: 240px;
-  }
   .container-right {
     height: 380px;
     padding: 25px;
   }
   .container-right button {
     padding: 15px;
+  }
+}
+@media speech {
+  .sr-only {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
